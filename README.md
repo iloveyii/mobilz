@@ -4,7 +4,7 @@ This is an eCommerce application developed in PHP Yii 2 framework and MySQL.
 
 ![Screenshot](http://mobilz.softhem.se/images/screenshot.png)
 
-[DEMO](http://mobilz.softhem.se/).
+[DEMO](http://mobilz.softhem.se/)
 
 ## What has been done
    * We have developed a backend application in PHP using [Yii 2](https://www.yiiframework.com/) which serves the API requests. 
