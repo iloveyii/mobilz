@@ -1,0 +1,170 @@
+var ADFMediaURLs='';
+var ADF_clickTag='http://ads.aftonbladet.se/eas/cu=63::camp=84561::no=159152::kw=link1-159152::cat1=11::cat2=5060::cat3=5060::kw2=a::EASTnp=np604|np3664|np3665|np3812|np3925|np3814|np3994|np4231|np4232|np4235::uuid=d85c71c6-b11a-11e3-be12-00259075ce4f::EASLink=http://track.adform.net/C/?bn=3419266;bsqno=3;li=3;cset=19|19|0|750|100|24|6|15|0|3|7|0|0;js=1;smid=-1;unloadid=6052837907765424031;pdmn=www.blocket.se;adfibeg=0;icid=5476377147501285921;icidt=635310182611445901;CREFURL=http%3a%2f%2fwww.blocket.se%2fEAS_fif.html';
+var ADF_ClickEvent='http://track.adform.net/C/?bn=3419266;bsqno=3;li=3;cset=19|19|0|750|100|24|6|15|0|3|7|0|0;js=1;smid=-1';
+var ADFtagID='1x';
+var ADFafbanID='3419266';
+var FlashObjectID='FlashID1x';
+var ADFDomain='http://s1.adform.net/Banners/';
+var ADFDomainCDN='http://files.adform.net/Banners/';
+var ADFVideoCDN='rtmp://s1yx966tga68s8.cloudfront.net/cfx/st/';
+var ADFVideoCDNList=['rtmp://s1yx966tga68s8.cloudfront.net/cfx/st/'];
+var ADFBanVer='4-342';
+var ADFBanVerBak='4-342';
+var ADFbu=true;
+var ADFerrTimeout = 15*24*60*60*1000;
+var ADFTemplateVersion='0';
+var ADFClientSiteId='0';
+var ADFTemplateId='0';
+var ADFGroupId='0';
+var ADFbanID='4430721';
+var ADFmembID='488047';
+var ADFcmpgnID='214538';
+var ADFassetID='0';
+var ADFbanPlacID='936431';
+var ADFUnloadID='6052837907765424031';
+var ADFGeoData='19286;11358;752';
+
+(function () {
+try{
+var i = Adform.ADFBannerUtils.getInstance()
+i.addBannerAttribute("1x", "bn", 3419266);
+i.addBannerAttribute("1x", "rotseqno", "3");
+i.addBannerAttribute("1x", "cookieID", "5476377147501285921");
+i.addBannerAttribute("1x", "smid", "-1");
+i.addBannerAttribute("1x", "unloadID", "6052837907765424031");
+i.addBannerAttribute("1x", "height", 90);
+i.addBannerAttribute("1x", "width", 728);
+i.addBannerAttribute("1x", "clickEvent", "http://track.adform.net/C/?bn=3419266;bsqno=3;li=3;cset=19|19|0|750|100|24|6|15|0|3|7|0|0;js=1;smid=-1");
+i.addBannerAttribute("1x", "pm", "214538");
+i.addBannerAttribute("1x", "visibilityArea", [50]);
+i.addBannerAttribute("1x", "ms", "488047");
+i.addBannerAttribute("1x", "ban", "4430721");
+i.addBannerAttribute("1x", "stubFileURL", "");
+i.addBannerAttribute("1x", "serverTime", 1395421461145);
+i.addBannerAttribute("1x", "bnpl", "936431");
+i.addBannerAttribute("1x", "sendUnloadData", 1);
+i.addBannerAttribute("1x", "unloadScriptVersion", 13);
+i.addBannerAttribute("1x", "isEventsEnabled", 1);
+i.setBannerRegisteredStatus("1x");
+}catch(e){}
+})();
+
+
+
+<!--
+var ADFtagid1345456691 = (typeof(ADFafbanID)!="undefined") ? ADFafbanID : 0;
+var ADFclickTagString1345456691 = (typeof(ADF_clickTag)!="undefined") ? escape(ADF_clickTag) : escape('http://track.adform.net/C/?bn='+ADFtagid1345456691);
+var ADFclickTagParameters1345456691 = (typeof(ADF_clickTagPars)!="undefined") ? escape(ADF_clickTagPars) : '';
+var ADFclickEventString = (typeof(ADF_ClickEvent) != "undefined") ? escape(ADF_ClickEvent) : escape('http://track.adform.net/C/?bn='+ADFtagid1345456691+';bsqno=1;li=1;cset=');
+var FlashObjectID=(typeof(FlashObjectID)!="undefined") ? FlashObjectID : 'adftest';
+var ADFDomain=(typeof(ADFDomain)!="undefined") ? ADFDomain : '';
+var ADFDomainCDN=(typeof(ADFDomainCDN)!="undefined") ? ADFDomainCDN : '';
+var ADFVideoCDN=(typeof(ADFVideoCDN)!="undefined") ? ADFVideoCDN : '';
+var ADFClientSiteId=(typeof(ADFClientSiteId)!="undefined") ? ADFClientSiteId : '';
+var ADFTemplateVersion=(typeof(ADFTemplateVersion)!="undefined") ? ADFTemplateVersion : '1345456691';
+var ADFTemplateId=(typeof(ADFTemplateId)!="undefined") ? ADFTemplateId : '';
+var ADFGroupId=(typeof(ADFGroupId)!="undefined") ? ADFGroupId : '';
+var ADFGeoData=(typeof ADFGeoData != "undefined" || ADFGeoData != null) ? ADFGeoData : '0;0;0';
+var ADFBanVer=(typeof(ADFBanVer)!="undefined") ? ADFBanVer : '1345456691';
+var ADFBanVerBak=(typeof(ADFBanVerBak)!="undefined") ? ADFBanVerBak : '1345456691';
+var ADFtagID=(typeof(ADFtagID)!="undefined") ? ADFtagID : '1x';
+if (typeof(ADFbu)=="undefined") ADFbu=false;
+
+var ADFcmpgnID = (typeof(ADFcmpgnID) != "undefined") ? ADFcmpgnID : '0';
+var ADFmembID = (typeof(ADFmembID) != "undefined") ? ADFmembID : '0';
+var ADFbanID = (typeof(ADFbanID) != "undefined") ? ADFbanID : '0';
+var ADFbanPlacID = (typeof(ADFbanPlacID) != "undefined") ? ADFbanPlacID : '0';
+var ADFUnloadID = (typeof(ADFUnloadID) != "undefined") ? ADFUnloadID : '0';
+
+
+var ADFclickTagVariables1345456691 = 'clickTAG='+ADFclickTagString1345456691+';C=1'+ADFclickTagParameters1345456691+'';
+if (ADFMediaURLs) ADFclickTagVariables1345456691 = ADFMediaURLs;
+
+
+
+if(typeof Adform == "undefined") {var Adform = {};};
+Adform.BannerData                    = {};
+Adform.Data                          = Adform.BannerData;
+Adform.RMBData                       = Adform.BannerData;
+Adform.RMBData.type                  = 'standard';
+Adform.RMBData.subtype               = 'flash';
+Adform.BannerData.timestamp          = '201403211630076930'; // std.flash 2014 02 17 rev. 1.148881
+Adform.BannerData.ADFFlash           =  ADFDomain +'4430721/4430721.swf?bv='+ADFBanVer;
+Adform.BannerData.ADFBuckup          =  ADFDomain +'4430720/4430720.jpg?bv='+ADFBanVerBak;
+Adform.BannerData.ADFBuckupClickURL  =  ADF_clickTag+';C=0';
+Adform.BannerData.width              = "728";
+Adform.BannerData.height             = "90";
+Adform.BannerData.ADFid              = ADFtagID;
+Adform.BannerData.ADFban             = (typeof(ADFafbanID)!="undefined") ? ADFafbanID : 0;
+Adform.BannerData.fVer               = 11.4;
+Adform.BannerData.placeId            = "ADFDiv_1345456691";
+Adform.BannerData.wmode              = "opaque";
+Adform.RMBData.landingPageTarget     = "_blank";
+Adform.BannerData.quality            = "autohigh";
+Adform.BannerData.bannerAlign        = "";
+
+
+(function () {
+var string = ''
+		+'cid='+ADFClientSiteId
+		+'&geo='+ADFGeoData
+		+'&gid='+ADFGroupId
+		+'&tv='+ADFTemplateVersion
+		+'&tid='+ADFTemplateId
+		+'&domain='+ ADFDomain 
+		+'&bv='+ADFBanVer
+		+'&ADFid='+ADFtagID
+		+'&ADFcmpgnID='+ADFcmpgnID
+		+'&ADFmembID='+ADFmembID
+		+'&ADFbanID='+ADFbanID
+		+'&ADFbanPlacID='+ADFbanPlacID
+		+'&unloadID='+ADFUnloadID
+		+"&bn="+ADFtagid1345456691
+		+"&wmode=opaque"
+;
+
+var flashVars = {};
+var i = 0, parts, name, value;
+var list = string.split('&');
+for (;i < list.length; i++) if (list[i]) {
+	parts = list[i].split('=');
+	name = encodeURIComponent(parts.shift());
+	value = encodeURIComponent(parts.join('='));
+	flashVars[name] = value;
+}
+
+var data = Adform.BannerData;
+data.flashvars = data.clicktags = flashVars;
+flashVars.evtBaseLink = encodeURIComponent(unescape(ADFclickEventString));
+
+var i = 0, parts, name, value;
+
+
+var params = ADFclickTagParameters1345456691;
+var str = ADFclickTagString1345456691
+var params2 = unescape(params);
+var str2 = unescape(str);
+
+var list = ADFclickTagVariables1345456691.split('='+ str);
+for (; i < list.length - 1; i++) {
+	name = encodeURIComponent(i ? list[i].split('&').pop() : list[i]);
+	value = encodeURIComponent(str2 + list[i+1].split('&')[0].replace(params, params2));
+	flashVars[name] = value;
+}
+
+})();
+
+Adform.RMBData.css =  ADFDomainCDN +"scripts/assets/css/Adform.RMB.css?bv="+ADFBanVer;
+
+Adform.BannerList = Adform.BannerList || [];
+Adform.BannerList.push(Adform.BannerData);
+
+if (!Adform.RMB || !Adform.RMB.AdConstructor) {
+	// Load constructor script
+	document.write('<scr' + 'ipt type="text/javascript" src="'+ ADFDomain +'scripts/rmb/Adform.RMB.js?bv='+ Adform.cache +'"></scr' + 'ipt>');
+} else {
+	// Run loaded constructor
+	Adform.RMB.AdConstructor.build();
+}
+//-->
+

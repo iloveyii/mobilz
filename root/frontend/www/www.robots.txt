@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://www.oppettidr.se/sitemap-20120825.xml

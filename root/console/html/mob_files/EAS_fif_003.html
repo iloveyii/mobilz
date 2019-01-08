@@ -1,0 +1,119 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+		<title>EAS_fif</title>
+
+		
+			
+			<link href="EAS_fif_data/blocket_eas.css" rel="stylesheet" type="text/css">
+			
+		
+		<script type="text/javascript" src="EAS_fif_data/EAS_tag.js"></script>
+		 <script type="text/javascript">document.domain = document.domain.split('.').slice(-2).join('.');</script>
+
+
+		<script type="text/javascript">
+
+			var fif = {
+				getSize: function() {
+
+					var width = Math.max(document.body.scrollWidth, document.body.clientWidth);
+					var height = Math.max(document.body.scrollHeight, document.body.clientHeight);
+
+					if (width < "20" || height < "20") {
+						return false;
+					}
+
+					return {
+						width: width,
+						height: height
+					};
+				},
+
+				resize: function() {
+
+					var that = this;
+					var elem = window.frameElement;
+					var i = 0;
+					this.interval = setInterval(function() {
+						var o = that.getSize();
+
+						if (typeof o === "object") {
+							clearInterval(that.interval);
+
+							elem.width = o.width;
+							elem.height = o.height;
+
+							elem.style.width = o.width + "px";
+							elem.style.height = o.height + "px";
+						}
+						if(i > 3000){
+							clearInterval(that.interval);
+						}
+						i++;
+
+					}, 1);
+				},
+
+				bostadSpiral: function() {
+					var elem = window.frameElement;
+					var that = this;
+					var o = that.getSize();
+					var element = null;
+					var wrapper_id = null;
+
+					if (typeof o !== "object") {
+						var wrapper = elem.parentNode;
+						if (wrapper)
+						{
+							if ((wrapper_id = wrapper.getAttribute("id")) != null) {
+								if ('bostad_bottom_' == wrapper_id.slice(0, 14)) {
+									var parentWrapper = wrapper.parentNode;
+									if (parentWrapper)
+									{
+										var allElements = parentWrapper.getElementsByTagName("div");
+										for (var i = 0; (element = allElements[i]) != null; i++) {
+											element.style.display = "none";
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+		</script> 
+	</head>
+
+	<body onload="fif.resize();fif.bostadSpiral();" class="linux  ie ie_26">
+		<script type="text/javascript">
+			var scriptSrc = '';
+			if (typeof(window.frameElement) !== 'undefined' && (typeof(window.top.blocket.params) == 'undefined' || window.top.blocket.params.regress !== 1)) {
+				if ((longdesc = window.frameElement.getAttribute("data-longdesc")) != null) {
+					scriptSrc = longdesc;
+				}
+				else if (typeof(window.frameElement.longdesc) !== 'undefined' && window.frameElement.longdesc !== '') {
+					scriptSrc = window.frameElement.longdesc;
+				}
+			}
+			if (scriptSrc != '') {
+				function getUrlVars(str) {
+				    var href = str.split(/&amp;|&/);
+				    var o = {};
+				    for (var k in href) { 
+					if (!href[k].match(';')) { 
+					    var getParam = href[k].split('=');  
+					    o[getParam[0]] = getParam[1]; 
+					}   
+				    } 
+				    return o;
+				}
+
+				var myparams = getUrlVars(scriptSrc.split('?')[1]);
+				window.inDapIF = true;
+				document.write('<scr'+'ipt type="text/javascript" src="'+ scriptSrc +'"></scr'+'ipt>');
+			}
+                </script><script type="text/javascript" src="EAS_fif_data_003/eas.js"></script><!-- No matching campaign -->
+        
+
+</body></html>

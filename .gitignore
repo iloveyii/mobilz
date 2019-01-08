@@ -1,0 +1,8 @@
+/nbproject/private/*
+/root/frontend/www/img/products/*
+/root/frontend/www/assets/*
+/root/backend/www/assets/*
+/root/frontend/runtime/*
+/root/backend/runtime/*
+nbproject/
+.idea/

@@ -1,0 +1,31 @@
+#!/usr/bin/expect -f
+
+spawn sh
+match_max 100000
+expect -exact "#"
+
+send -- "cd /home/localwww/mobilz_se \n" 
+expect -exact "#"
+
+send -- "git pull origin master \n"
+expect -exact "Password for 'https://iloveyii@bitbucket.org': "
+send -- "AllahHu1@388Bismillah\n"
+expect -exact "#"
+
+send -- "cd /home/localwww/mobilz_se/root/frontend/www/img/products/ \n" 
+expect -exact "#"
+
+send -- "git pull origin master \n"
+expect -exact "Password for 'https://iloveyii@bitbucket.org': "
+send -- "AllahHu1@388Bismillah\n"
+expect -exact "#"
+
+send -- "cd /home/localwww/mobilz_se/root/data \n" 
+expect -exact "#"
+
+send -- "mysql -uroot -p mobilz < mobilz.sql \n" 
+expect -exact "Enter password: "
+send -- "Letmein1@3\n"
+expect -exact "#"
+
+

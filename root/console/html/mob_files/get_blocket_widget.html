@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="se"><head>
+
+		<title>Widget - klart.se</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="revisit-after" content="1 days">
+		<meta name="lang" content="se">
+		<meta http-equiv="Cache-Control" content="no-cache">
+
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+				font: 12px/1 Verdana;
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			a {
+				font-weight: normal;
+				color: #000;
+				text-decoration: none;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+
+			strong {
+				font-weight: normal;
+				font-size: 10px;
+				text-transform: uppercase;
+			}
+
+			img {
+				vertical-align: middle;
+			}
+
+			#widget {
+				padding: 0;
+				text-align: right;
+			}
+		</style>
+
+	</head>
+
+	<body class="js-enabled">
+
+		<script type="text/javascript">
+			baseURL = '/';
+		</script>
+
+		<div id="widget-container"><div style="cursor: pointer;" id="widget">
+	<p>
+														<strong>I kväll:</strong> 
+		<img src="get_blocket_widget_data/n300.gif" alt=""> 
+		5° 
+		<a target="_blank" href="http://logc253.xiti.com/go.url?xts=487908&amp;xtor=AD-500-[klart]-[weather]-[list]-[blocket]-[]-[]&amp;url=http://www.klart.se/v%C3%A4der-stockholm.html">
+			Stockholm
+		</a>
+	</p>
+</div></div>
+
+		<script type="text/javascript">
+			function readCookie(name) {
+				var nameEQ = name + "=";
+				var ca = document.cookie.split(';');
+				for(var i=0;i < ca.length;i++) {
+					var c = ca[i];
+					while (c.charAt(0)==' ') c = c.substring(1,c.length);
+					if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+				}
+				return null;
+			}
+
+			var jsonParse=function(){function g(a,b,c){return b?f[b]:String.fromCharCode(parseInt(c,16))}var a="(?:-?\\b(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?(?:[eE][+-]?[0-9]+)?\\b)";var b='(?:[^\\0-\\x08\\x0a-\\x1f"\\\\]'+'|\\\\(?:["/\\\\bfnrt]|u[0-9A-Fa-f]{4}))';var c='(?:"'+b+'*")';var d=new RegExp("(?:false|true|null|[\\{\\}\\[\\]]"+"|"+a+"|"+c+")","g");var e=new RegExp("\\\\(?:([^u])|u(.{4}))","g");var f={'"':'"',"/":"/","\\":"\\",b:"\b",f:"\f",n:"\n",r:"\r",t:"\t"};var h=new String("");var i="\\";var j={"{":Object,"[":Array};var k=Object.hasOwnProperty;return function(a,b){var c=a.match(d);var f;var j=c[0];var l=false;if("{"===j){f={}}else if("["===j){f=[]}else{f=[];l=true}var m;var n=[f];for(var o=1-l,p=c.length;o<p;++o){j=c[o];var q;switch(j.charCodeAt(0)){default:q=n[0];q[m||q.length]=+j;m=void 0;break;case 34:j=j.substring(1,j.length-1);if(j.indexOf(i)!==-1){j=j.replace(e,g)}q=n[0];if(!m){if(q instanceof Array){m=q.length}else{m=j||h;break}}q[m]=j;m=void 0;break;case 91:q=n[0];n.unshift(q[m||q.length]=[]);m=void 0;break;case 93:n.shift();break;case 102:q=n[0];q[m||q.length]=false;m=void 0;break;case 110:q=n[0];q[m||q.length]=null;m=void 0;break;case 116:q=n[0];q[m||q.length]=true;m=void 0;break;case 123:q=n[0];n.unshift(q[m||q.length]={});m=void 0;break;case 125:n.shift();break}}if(l){if(n.length!==1){throw new Error}f=f[0]}else{if(n.length){throw new Error}}if(b){var r=function(a,c){var d=a[c];if(d&&typeof d==="object"){var e=null;for(var f in d){if(k.call(d,f)&&d!==a){var g=r(d,f);if(g!==void 0){d[f]=g}else{if(!e){e=[]}e.push(f)}}}if(e){for(var h=e.length;--h>=0;){delete d[e[h]]}}}return b.call(a,c,d)};f=r({"":f},"")}return f}}()
+
+			function superSimpleAjax (conf, updateID) {
+				var config = {
+					method:		conf.method || 'get', 
+					url:		conf.url, 
+					data:		conf.data || '', 
+					callback:	conf.callback || function (data) {
+						if (updateID) {
+							document.getElementById(updateID).innerHTML = data;
+						}
+					}
+				};
+
+				var requestObject;
+
+				try {
+					requestObject = new XMLHttpRequest();
+				}
+				catch (e) {
+					requestObject = new ActiveXObject('Microsoft.XMLHTTP');
+				}
+
+				var onReadyStateChange = function () {
+					if (requestObject.readyState == 4) {
+						config.callback(requestObject.responseText);
+					}
+				};
+
+				if (config.method.toUpperCase() == 'POST') {
+					requestObject.open('POST', config.url, true);
+					requestObject.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+					requestObject.onreadystatechange = onReadyStateChange;
+					requestObject.send(config.data);
+				}
+				else {
+					requestObject.open('GET', config.url + (config.data != '' ? '?' : '') + config.data, true);
+					requestObject.onreadystatechange = onReadyStateChange;
+					requestObject.send(null);
+				}
+			}
+
+			var ElTiempoWidget = {
+				init: function() {
+					this.fix_links();
+					document.getElementsByTagName('a')[0].href = "http://logc253.xiti.com/go.url?xts=487908&xtor=AD-500-[klart]-[weather]-[list]-[blocket]-[]-[]&url=" + document.getElementsByTagName('a')[0].href.substr(39).split("%23")[0];
+				}, 
+
+				fix_links: function () {
+					var widget	= document.getElementById('widget');
+					var href	= "http://logc253.xiti.com/go.url?xts=487908&xtor=AD-500-[klart]-[weather]-[list]-[blocket]-[]-[]&url=" + document.getElementsByTagName('a')[0].href.substr(39).split("%23")[0];
+					var as		= widget.getElementsByTagName('a');
+					var i		= 0;
+
+					var open_new_window = function (e) {
+						if (!e) {
+							e = window.event;
+						}
+						var target;
+						if (e.target) {
+							target = e.target;
+						} else if (e.srcElement) {
+							target = e.srcElement;
+						}
+						if (target && target.nodeName !== "INPUT") {
+							window.open(href);
+
+							if (e.cancelBubble) {
+								e.cancelBubble = true;
+								e.returnValue = false;
+							} else if (e.stopPropagation) {
+								e.stopPropagation();
+								e.preventDefault();
+							}
+
+							return false;
+						}
+					};
+
+					widget.onclick = open_new_window;
+					widget.style.cursor = 'pointer';
+
+					for (i = 0; as[i]; i++) {
+						as[i].onclick = open_new_window;
+					}
+				}
+			};
+
+			// Widget hash for blocket
+			var widgetHash = '6156d682b655ea176621686696d1f8c8';
+
+			// Default city
+			var city = 'stockholm';
+
+			// If a provided city is set - use that
+			if (window.location.hash.length) {
+				city = window.location.hash.substr(1);
+			}
+
+			// If a VLC cookie is set - use that city
+			var vlc = readCookie('vlc_r_b');
+
+			if (vlc) {
+				vlc = jsonParse(decodeURIComponent(vlc));
+
+				for (var i in vlc) {
+					var type = vlc[i]['type'];
+					if (type == 'city' || type == 'airport' || type == 'golf' || type == 'world_city' || type == 'ski') {
+						city = vlc[i].urlized;
+						break;
+					}
+				}
+			}
+
+			// Load widget
+			var url = '/widget/get_widget/' + widgetHash + '/' + city + '/?ajax=true';
+
+			superSimpleAjax({url: url, callback: function (data) {
+				document.getElementById('widget-container').innerHTML = data;
+
+				if (data !== "") {
+					ElTiempoWidget.init();
+				}
+			}});
+		</script>
+
+	
+
+
+</body></html>

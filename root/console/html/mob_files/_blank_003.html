@@ -1,0 +1,60 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><script type="text/javascript">
+	var d=document;
+	
+	function cookie_check(ifd,ife){
+	  var s=ife.indexOf(ifd);
+	  if(s===-1)return "";
+	  s+=ifd.length;
+	  var e=ife.indexOf(";",s);
+	  if(e===-1)e=ife.length;
+	  return ife.substring(s,e);
+	}
+	
+	function pad(num) {return(("0"+num).slice(-2));}
+	
+	function send_data() {
+		var now=new Date();
+		var timestamp=pad(now.getHours())+':'+pad(now.getMinutes())+':'+pad(now.getSeconds());
+		
+		var OAS_taxonomy=d.URL.split("__!__")[2];
+		OAS_taxonomy=OAS_taxonomy.replace(/\&amp;/g,'&');
+		
+		var oas_tax_parts=OAS_taxonomy.split("&");
+		for(var i=0; i<oas_tax_parts.length; i++) {
+			if (oas_tax_parts[i].toLowerCase().indexOf("sajt=") === 0 ) {
+				OAS_taxonomy += "&Site="+oas_tax_parts[i].substring(5,oas_tax_parts[i].length);
+			}
+			if (oas_tax_parts[i].toLowerCase().indexOf("sektion=") === 0 ) {
+				OAS_taxonomy += "&Section="+oas_tax_parts[i].substring(8,oas_tax_parts[i].length);
+			}
+		}
+		OAS_taxonomy = (OAS_taxonomy.substring(0,1) === "&" ? OAS_taxonomy : "&" + OAS_taxonomy);
+		if(oas_ri_cookie.indexOf('computer') !== -1) {
+			if(d.ePingIOas7===null||typeof(d.ePingIOas7)==="undefined")d.ePingIOas7=new Image();
+			d.ePingIOas7.src='http://panel.research-int.se/2/www.research-int.se/@Bottom?XE&panel=true'+OAS_taxonomy+'&'+oas_ri_cookie+'&timestamp='+timestamp+'&XE'+'&xe_random='+xe_random;
+		}
+	}
+	
+	var oas_d=new Date();
+	var oas_m=oas_d.getTime();
+	oas_d.setTime(oas_m+1209600000);
+											 
+	var xe_random="";
+	if (isNaN(d.axel2)) {
+			d.axel2 = Math.random() + "";
+			xe_random = d.axel2 * 1000000000000000000;
+		}
+	
+	if((cookie_check("openinsight=",d.cookie)).length === 0) {
+		d.cookie="panel=false; expires="+oas_d.toGMTString()+";path=/; domain=.research-int.se";
+		var root_dom=d.URL.split("__!__")[1];
+		panelImage = new Image();
+		panelImage.src = root_dom+"/RealMedia/ads/adstream.cap?"+xe_random+"&c=member_type&e=14d" 
+
+	} else {
+		var oas_ri_cookie=cookie_check("openinsight=",d.cookie);
+		send_data();
+	}
+</script>
+</head><body></body></html>

@@ -1,0 +1,13 @@
+#!/usr/bin/expect -f
+
+spawn ssh root@193.34.144.219 
+match_max 100000
+expect -exact "root@193.34.144.219's password: "
+send -- "Sunny1@388\n" 
+expect -exact "root@vmi13202:~# "
+
+send -- "cd /home/localwww/mobilz/ \n" 
+expect -exact "root@vmi13202:/home/localwww/mobilz# "
+
+interact
+

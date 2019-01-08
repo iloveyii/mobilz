@@ -1,0 +1,16 @@
+Array
+(
+)
+exception 'SeleniumClient\WebDriverWaitTimeoutException' with message 'Timeout for specified condition caused by object of class: SeleniumClient\WebDriver, method invoked: findElement. Arguments: <By strategy: 'css selector', strategy factor '.ajax[title="Öppnas i lager över"]'>,<1>' in /home/robert/oppettidr/root/common/lib/Nearsoft-PHP-SeleniumClient-bab8290/SeleniumClient/WebDriverWait.php:87
+Stack trace:
+#0 /home/robert/oppettidr/root/common/lib/Nearsoft-PHP-SeleniumClient-bab8290/SeleniumClient/WebDriver.php(408): SeleniumClient\WebDriverWait->until(Object(SeleniumClient\WebDriver), 'findElement', Array)
+#1 /home/robert/oppettidr/root/console/commands/XyzCommand.php(37): SeleniumClient\WebDriver->waitForElementUntilIsPresent(Object(SeleniumClient\By), 60)
+#2 [internal function]: XyzCommand->actionSwedbank()
+#3 /home/robert/oppettidr/root/common/lib/yii/yii-1.1.10.r3566/framework/console/CConsoleCommand.php(141): ReflectionMethod->invokeArgs(Object(XyzCommand), Array)
+#4 /home/robert/oppettidr/root/common/lib/yii/yii-1.1.10.r3566/framework/console/CConsoleCommandRunner.php(65): CConsoleCommand->run(Array)
+#5 /home/robert/oppettidr/root/common/lib/yii/yii-1.1.10.r3566/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#6 /home/robert/oppettidr/root/common/lib/yii/yii-1.1.10.r3566/framework/base/CApplication.php(162): CConsoleApplication->processRequest()
+#7 /home/robert/oppettidr/root/common/lib/yii/yii-1.1.10.r3566/framework/yiic.php(33): CApplication->run()
+#8 /home/robert/oppettidr/root/console/yiic.php(7): require_once('/home/robert/op...')
+#9 /home/robert/oppettidr/root/console/yiic(4): require_once('/home/robert/op...')
+#10 {main}
