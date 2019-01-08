@@ -4,6 +4,8 @@ This is an eCommerce application developed in PHP Yii 2 framework and MySQL.
 
 ![Screenshot](http://mobilz.softhem.se/images/screenshot.png)
 
+DEMO is here [DEMO](http://mobilz.softhem.se/).
+
 ## What has been done
    * We have developed a backend application in PHP using [Yii 2](https://www.yiiframework.com/) which serves the API requests. 
    * We have developed a frontend application using Html 5, Js, JQuery, Css 3 which is used by the customer.  
@@ -51,10 +53,6 @@ $router->get('/posts/index', function ($request) {
     $controller->index();
 });
 ```
-
-DEMO is here [DEMO](http://sportspoll.softhem.se).
-
-
 
 
 DIRECTORY STRUCTURE
